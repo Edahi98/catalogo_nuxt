@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #000033;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.h1{
+    background: #D81B60;
+    background: linear-gradient(to right, #D81B60 0%, #FDD835 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-family: "Rock Salt";
+    letter-spacing: 13px;
+    font-size: 20px;
+}
+
+.bars{
+    display: none;
+    margin-right: 4px;
+}
+
+.slideover{
+    display: none;
+}
+
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar a{
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transform: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar a:hover{
+    color: #1b2631;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+
+
+.nav-bar a.activate{
+    color: #1b2631;
+    background-color: white;
+}
+
+
+
+@media(max-width: 756px){
+    header {
+    padding: 0;
+}
+.bars {
+    display: block;
+    cursor: pointer;
+}
+
+.bars .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0px;
+}
+
+.nav-bar{
+    height: 0px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #000033;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.nav-bar.active{
+    height: 450px;
+}
+
+.nav-bar ul{
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.nav-bar.active ul{
+    opacity: 1;
+
+}
+
+.nav-bar.active a{
+    margin-bottom: 20px;
+
+}
+
+.logo{
+    display: flex;
+}
+}
